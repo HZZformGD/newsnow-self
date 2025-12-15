@@ -525,5 +525,13 @@
     "home": "https://www.freebuf.com/",
     "color": "green",
     "interval": 600000
+  },
+  "fuliba": {
+    "title": "最新分享",
+    "name": "fuliba",
+    "column": "tech",
+    "home": "https://fuliba.net/",
+    "color": "slate",
+    "interval": 600000
   }
 }

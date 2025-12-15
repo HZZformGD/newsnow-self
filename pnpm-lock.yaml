@@ -40,6 +40,9 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.11.0
         version: 1.11.1
+      '@monaco-editor/react':
+        specifier: ^4.7.0
+        version: 4.7.0(monaco-editor@0.15.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-query-devtools':
         specifier: ^5.66.11
         version: 5.75.6(@tanstack/react-query@5.75.7(react@19.1.0))(react@19.1.0)
@@ -100,6 +103,9 @@ importers:
       md5:
         specifier: ^2.3.0
         version: 2.3.0
+      monaco-editor-react:
+        specifier: ^1.0.2
+        version: 1.0.2
       ofetch:
         specifier: ^1.4.1
         version: 1.4.1
@@ -1500,6 +1506,16 @@ packages:
   '@modelcontextprotocol/sdk@1.11.1':
     resolution: {integrity: sha512-9LfmxKTb1v+vUS1/emSk1f5ePmTLkb9Le9AxOB5T0XM59EUumwcS45z05h7aiZx3GI0Bl7mjb3FMEglYj+acuQ==}
     engines: {node: '>=18'}
+
+  '@monaco-editor/loader@1.7.0':
+    resolution: {integrity: sha512-gIwR1HrJrrx+vfyOhYmCZ0/JcWqG5kbfG7+d3f/C1LXk2EvzAbHSg3MQ5lO2sMlo9izoAZ04shohfKLVT6crVA==}
+
+  '@monaco-editor/react@4.7.0':
+    resolution: {integrity: sha512-cyzXQCtO47ydzxpQtCGSQGOC8Gk3ZUeBXFAxD+CWXYFo5OqZyZUonFl0DwUlTyAfRHntBfw2p3w4s9R6oe1eCA==}
+    peerDependencies:
+      monaco-editor: '>= 0.25.0 < 1'
+      react: ^19
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   '@napi-rs/pinyin-android-arm-eabi@1.7.5':
     resolution: {integrity: sha512-dnurqJdedbU8D1Ngudf10nXvc4BbVSe4ki9U2LUZoGMDGa069t4c87BHRXvcy2By3YpOozORv9/QTMxAQFVOLg==}
@@ -4421,8 +4437,14 @@ packages:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  h3-nightly@1.15.4-20250730-094032-325a62b:
-    resolution: {integrity: sha512-t4KAYi8qaq0urEq0YW/rSa1rcfLsi4hs+d5cQKvQ0IiXDbZwE5lvgRoYjlK3J87bXllQAjEO5+7hlA6Td915+w==}
+  h3-nightly@2.0.0-20251212-101841-5405a1b:
+    resolution: {integrity: sha512-CefkhUrT/EtzhjXQjEdeXPCsF5lkEsAV/67OqyV4FGvsIi5BDnDMtc88CcTLOhPX0N5aku3wOsmhFVM7FMGZoA==}
+    engines: {node: '>=20.11.1'}
+    peerDependencies:
+      crossws: ^0.4.1
+    peerDependenciesMeta:
+      crossws:
+        optional: true
 
   h3@1.15.3:
     resolution: {integrity: sha512-z6GknHqyX0h9aQaTx22VZDf6QyZn+0Nh+Ym8O/u0SGSkyF5cuTJYKlc8MkzW3Nzf9LE1ivcpmYC3FUGpywhuUQ==}
@@ -5046,6 +5068,10 @@ packages:
   long@5.3.2:
     resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
 
+  loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+
   loupe@3.1.3:
     resolution: {integrity: sha512-kkIp7XSkP78ZxJEsSxW3712C6teJVoeHHwgo9zJ380de7IYyJ2ISlxojcH2pC5OFLewESmnRi/+XCDIEEVyoug==}
 
@@ -5228,6 +5254,12 @@ packages:
     resolution: {integrity: sha512-kvw3B4G19IXk+BOXnYq/D/VeO9qfHaapMeuS7w7sNUqmGaA6hywdFHMi+VWeR9wUScXM7XjoryTffCZ5B0/8IA==}
     engines: {node: '>=14'}
     hasBin: true
+
+  monaco-editor-react@1.0.2:
+    resolution: {integrity: sha512-Mi2irkIf+91UmhLAVVBrkRHrq+L4DmLpuw53Ta0pGlSHTJk9mQsWKiDgif0RBvJSpthgi7dKsymr4nCgt07+Fg==}
+
+  monaco-editor@0.15.6:
+    resolution: {integrity: sha512-JoU9V9k6KqT9R9Tiw1RTU8ohZ+Xnf9DMg6Ktqqw5hILumwmq7xqa/KLXw513uTUsWbhtnHoSJYYR++u3pkyxJg==}
 
   motion-dom@12.10.5:
     resolution: {integrity: sha512-F7XKmhxXEH/y3aWWf0N2w69wNSN+6PcJ1seqR1WolClmXpPhj+xwzs9j5CpsMFzeHR1D7irl3JcWMToPRwX6Hg==}
@@ -5712,6 +5744,9 @@ packages:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
     engines: {node: '>= 6'}
 
+  prop-types@15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
@@ -5773,6 +5808,9 @@ packages:
 
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
+  react-is@16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   react-remove-scroll-bar@2.3.8:
     resolution: {integrity: sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==}
@@ -5983,6 +6021,9 @@ packages:
     resolution: {integrity: sha512-tfUOg6DTP4rhQ3VjOO6B4wyrJnGOX85requAXvqYTHsOgb2TFJdZ3aWpT8W2kPoypSGP7dZUyzxJ9ee4buM5Fg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  rou3@0.7.11:
+    resolution: {integrity: sha512-ELguG3ENDw5NKNmWHO3OGEjcgdxkCNvnMR22gKHEgRXuwiriap5RIYdummOaOiqUNcC5yU5txGCHWNm7KlHuAA==}
 
   router@2.2.0:
     resolution: {integrity: sha512-nLTrUKm2UyiL7rlhapu/Zl45FwNgkZGaCpZbIHajDYgwlJCOzLSk+cIPAnsEqV955GjILJnKbdQC1nVPz+gAYQ==}
@@ -6225,6 +6266,11 @@ packages:
     resolution: {integrity: sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg==}
     engines: {node: '>= 0.6'}
 
+  srvx@0.9.8:
+    resolution: {integrity: sha512-RZaxTKJEE/14HYn8COLuUOJAt0U55N9l1Xf6jj+T0GoA01EUH1Xz5JtSUOI+EHn+AEgPCVn7gk6jHJffrr06fQ==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
+
   stable-hash@0.0.5:
     resolution: {integrity: sha512-+L3ccpzibovGXFK+Ap/f8LOS0ahMrHTf3xu7mMLSpEGU0EO9ucaysSylKo9eRDFNhWve/y275iPmIZ4z39a9iA==}
 
@@ -6251,6 +6297,9 @@ packages:
 
   standard-as-callback@2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
+
+  state-local@1.0.7:
+    resolution: {integrity: sha512-HTEHMNieakEnoe33shBYcZ7NX83ACUjCu8c40iOGEZsngj9zRnkqS9j1pqQPXwobB0ZcVTk27REb7COQ0UR59w==}
 
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
@@ -8509,6 +8558,17 @@ snapshots:
       zod-to-json-schema: 3.24.5(zod@3.24.4)
     transitivePeerDependencies:
       - supports-color
+
+  '@monaco-editor/loader@1.7.0':
+    dependencies:
+      state-local: 1.0.7
+
+  '@monaco-editor/react@4.7.0(monaco-editor@0.15.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@monaco-editor/loader': 1.7.0
+      monaco-editor: 0.15.6
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   '@napi-rs/pinyin-android-arm-eabi@1.7.5':
     optional: true
@@ -11845,17 +11905,10 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
-  h3-nightly@1.15.4-20250730-094032-325a62b:
+  h3-nightly@2.0.0-20251212-101841-5405a1b:
     dependencies:
-      cookie-es: 1.2.2
-      crossws: 0.3.5
-      defu: 6.1.4
-      destr: 2.0.5
-      iron-webcrypto: 1.2.1
-      node-mock-http: 1.0.2
-      radix3: 1.1.2
-      ufo: 1.6.1
-      uncrypto: 0.1.3
+      rou3: 0.7.11
+      srvx: 0.9.8
 
   h3@1.15.3:
     dependencies:
@@ -12459,6 +12512,10 @@ snapshots:
   long@5.3.2:
     optional: true
 
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
   loupe@3.1.3: {}
 
   lru-cache@10.4.3: {}
@@ -12632,6 +12689,14 @@ snapshots:
     dependencies:
       ast-module-types: 5.0.0
       node-source-walk: 6.0.2
+
+  monaco-editor-react@1.0.2:
+    dependencies:
+      monaco-editor: 0.15.6
+      prop-types: 15.8.1
+      react: 19.1.0
+
+  monaco-editor@0.15.6: {}
 
   motion-dom@12.10.5:
     dependencies:
@@ -13205,6 +13270,12 @@ snapshots:
       kleur: 3.0.3
       sisteransi: 1.0.5
 
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+
   proxy-addr@2.0.7:
     dependencies:
       forwarded: 0.2.0
@@ -13268,6 +13339,8 @@ snapshots:
       scheduler: 0.26.0
 
   react-fast-compare@3.2.2: {}
+
+  react-is@16.13.1: {}
 
   react-remove-scroll-bar@2.3.8(@types/react@19.1.3)(react@19.1.0):
     dependencies:
@@ -13524,6 +13597,8 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.40.2
       '@rollup/rollup-win32-x64-msvc': 4.40.2
       fsevents: 2.3.3
+
+  rou3@0.7.11: {}
 
   router@2.2.0:
     dependencies:
@@ -13812,6 +13887,8 @@ snapshots:
   sqlstring@2.3.3:
     optional: true
 
+  srvx@0.9.8: {}
+
   stable-hash@0.0.5: {}
 
   stack-generator@2.0.10:
@@ -13841,6 +13918,8 @@ snapshots:
       get-source: 2.0.12
 
   standard-as-callback@2.1.0: {}
+
+  state-local@1.0.7: {}
 
   statuses@2.0.1: {}
 
@@ -14487,7 +14566,7 @@ snapshots:
     dependencies:
       consola: 3.4.2
       defu: 6.1.4
-      h3: h3-nightly@1.15.4-20250730-094032-325a62b
+      h3: h3-nightly@2.0.0-20251212-101841-5405a1b
       nitropack: nitro-go@0.0.3(@libsql/client@0.15.4)(better-sqlite3@11.10.0)(mysql2@3.14.3)
       vite: 6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.4)(yaml@2.7.1)
     transitivePeerDependencies:
@@ -14508,6 +14587,7 @@ snapshots:
       - '@vercel/kv'
       - aws4fetch
       - better-sqlite3
+      - crossws
       - drizzle-orm
       - encoding
       - idb-keyval
