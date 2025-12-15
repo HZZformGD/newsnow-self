@@ -9,7 +9,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
     const latest = query.latest !== undefined && query.latest !== "false"
     let id = query.id as SourceID
     const isValid = (id: SourceID) => !id || !sources[id] || !getters[id]
-    console.info(id,'id', sources[id], 'sources', getters[id], 'getters')
+    console.info(id, "id", sources[id], "sources", getters[id], "getters")
     if (isValid(id)) {
       const redirectID = sources?.[id]?.redirect
       if (redirectID) id = redirectID

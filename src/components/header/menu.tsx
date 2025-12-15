@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import CreateSourceModal from "../sourcesAction/CreateSourceModal"
 // function ThemeToggle() {
 //   const { isDark, toggleDark } = useDark()
@@ -13,22 +12,19 @@ import CreateSourceModal from "../sourcesAction/CreateSourceModal"
 // }
 
 export function Menu() {
-  const { loggedIn, login, logout, userInfo, enableLogin } = useLogin()
-  const [shown, show] = useState(false)
   const [open, setOpen] = useState(false)
   const onClose = () => {
-    console.info('s')
     setOpen(false)
   }
   return (
-    <span className="relative" onMouseEnter={() => show(true)} onMouseLeave={() => show(false)}>
+    <span className="relative">
       <button
         onClick={() => setOpen(true)}
-         title="新增新闻源"
-         className="i-ph-newspaper-clipping btn"
+        title="新增新闻源"
+        className="i-ph-newspaper-clipping btn"
       >
         {/* 使用 ph-newspaper-clipping 图标 */}
-       </button>
+      </button>
       <CreateSourceModal isOpen={open} onClose={onClose} />
     </span>
   )
